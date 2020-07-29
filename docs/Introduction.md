@@ -7,9 +7,9 @@ PHP ETL provides the Extract, Transform and Load capabilities that streamline th
 You can, for example, extract data from a csv file, trim white spaces from specific columns and then load the values into a database table:
 
 ```php
-use Vtoropchin\Evtl\Etl;
+use Vtoropchin\Evtl\Evtl;
 
-$evtl = new Etl;
+$evtl = new Evtl;
 
 $evtl->extract('csv', '/path/to/users.csv')
     ->transform('trim', ['columns' => ['name', 'email']])

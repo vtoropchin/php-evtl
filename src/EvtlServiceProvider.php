@@ -4,7 +4,7 @@ namespace Vtoropchin\Evtl;
 
 use Illuminate\Support\ServiceProvider;
 
-class EtlServiceProvider extends ServiceProvider
+class EvtlServiceProvider extends ServiceProvider
 {
     /**
      * Perform post-registration booting of services.
@@ -17,7 +17,7 @@ class EtlServiceProvider extends ServiceProvider
         $connections['default'] = $connections[$this->app['config']['database.default']];
 
         foreach ($connections as $name => $config) {
-            Etl::service('db')->addConnection($config, $name);
+            Evtl::service('db')->addConnection($config, $name);
         }
     }
 }

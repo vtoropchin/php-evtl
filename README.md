@@ -20,9 +20,9 @@ Documentation can be found [here](https://php-etl.gitbook.io/).
 ## Example
 In the example below, we will extract data from a csv file, trim white spaces from the name and email columns and then insert the values into the users table:
 ```php
-use Vtoropchin\Evtl\Etl;
+use Vtoropchin\Evtl\Evtl;
 
-$evtl = new Etl;
+$evtl = new Evtl;
 
 $evtl->extract('csv', '/path/to/users.csv')
     ->transform('trim', ['columns' => ['name', 'email']])

@@ -2,7 +2,7 @@
 
 namespace Tests;
 
-use Vtoropchin\Evtl\Etl;
+use Vtoropchin\Evtl\Evtl;
 use Vtoropchin\Evtl\Container;
 
 class EtlTest extends TestCase
@@ -20,9 +20,9 @@ class EtlTest extends TestCase
         $pipeline = $this->createMock('Vtoropchin\Evtl\Pipeline');
         $pipeline->expects($this->once())->method('extractor')->with($extractor);
 
-        $evtl = new Etl($container, $pipeline);
+        $evtl = new Evtl($container, $pipeline);
 
-        $this->assertInstanceOf(Etl::class, $evtl->extract('step_name', 'input', ['options']));
+        $this->assertInstanceOf(Evtl::class, $evtl->extract('step_name', 'input', ['options']));
     }
 
     /** @test */
@@ -37,9 +37,9 @@ class EtlTest extends TestCase
         $pipeline = $this->createMock('Vtoropchin\Evtl\Pipeline');
         $pipeline->expects($this->once())->method('pipe')->with($transformer);
 
-        $evtl = new Etl($container, $pipeline);
+        $evtl = new Evtl($container, $pipeline);
 
-        $this->assertInstanceOf(Etl::class, $evtl->transform('step_name', ['options']));
+        $this->assertInstanceOf(Evtl::class, $evtl->transform('step_name', ['options']));
     }
 
     /** @test */
@@ -55,9 +55,9 @@ class EtlTest extends TestCase
         $pipeline = $this->createMock('Vtoropchin\Evtl\Pipeline');
         $pipeline->expects($this->once())->method('pipe')->with($loader);
 
-        $evtl = new Etl($container, $pipeline);
+        $evtl = new Evtl($container, $pipeline);
 
-        $this->assertInstanceOf(Etl::class, $evtl->load('step_name', 'output', ['options']));
+        $this->assertInstanceOf(Evtl::class, $evtl->load('step_name', 'output', ['options']));
     }
 
     /** @test */
@@ -70,7 +70,7 @@ class EtlTest extends TestCase
 
         $container = $this->createMock('Vtoropchin\Evtl\Container');
 
-        $evtl = new Etl($container, $pipeline);
+        $evtl = new Evtl($container, $pipeline);
 
         $evtl->run();
     }
@@ -86,7 +86,7 @@ class EtlTest extends TestCase
 
         $container = $this->createMock('Vtoropchin\Evtl\Container');
 
-        $evtl = new Etl($container, $pipeline);
+        $evtl = new Evtl($container, $pipeline);
 
         $this->assertEquals(['row1', 'row2'], $evtl->toArray());
     }
@@ -99,6 +99,6 @@ class EtlTest extends TestCase
 
         Container::setInstance($container);
 
-        $this->assertEquals('instance', Etl::service('service'));
+        $this->assertEquals('instance', Evtl::service('service'));
     }
 }

@@ -6,7 +6,7 @@ use Vtoropchin\Evtl\Loaders\Loader;
 use Vtoropchin\Evtl\Extractors\Extractor;
 use Vtoropchin\Evtl\Transformers\Transformer;
 
-class Etl
+class Evtl
 {
     /**
      * The etl container.
@@ -23,7 +23,7 @@ class Etl
     protected $pipeline;
 
     /**
-     * Create a new Etl instance.
+     * Create a new Evtl instance.
      *
      * @param  Container  $container
      * @param  Pipeline  $pipeline

@@ -8,11 +8,16 @@ use Vtoropchin\Evtl\Transformers\JsonDecode;
 
 class JsonDecodeTest extends TestCase
 {
+    /**
+     * @var array|Row[]
+     */
+    protected array $dataRow;
+
     protected function setUp()
     {
         parent::setUp();
 
-        $this->data = [
+        $this->dataRow = [
             new Row(['id' => '"1"', 'data' => '{"name":"John Doe","email":"johndoe@email.com"}']),
             new Row(['id' => '"2"', 'data' => '{"name":"Jane Doe","email":"janedoe@email.com"}']),
         ];
@@ -28,9 +33,9 @@ class JsonDecodeTest extends TestCase
 
         $transformer = new JsonDecode;
 
-        $this->execute($transformer, $this->data);
+        $this->execute($transformer, $this->dataRow);
 
-        $this->assertEquals($expected, $this->data);
+        $this->assertEquals($expected, $this->dataRow);
     }
 
     /** @test */
@@ -45,9 +50,9 @@ class JsonDecodeTest extends TestCase
 
         $transformer->options(['assoc' => true]);
 
-        $this->execute($transformer, $this->data);
+        $this->execute($transformer, $this->dataRow);
 
-        $this->assertEquals($expected, $this->data);
+        $this->assertEquals($expected, $this->dataRow);
     }
 
     /** @test */
@@ -62,8 +67,8 @@ class JsonDecodeTest extends TestCase
 
         $transformer->options(['columns' => ['data']]);
 
-        $this->execute($transformer, $this->data);
+        $this->execute($transformer, $this->dataRow);
 
-        $this->assertEquals($expected, $this->data);
+        $this->assertEquals($expected, $this->dataRow);
     }
 }

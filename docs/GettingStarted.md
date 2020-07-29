@@ -64,16 +64,16 @@ $config = [
 
 Adding the default connection:
 ```php
-use Vtoropchin\Evtl\Etl;
+use Vtoropchin\Evtl\Evtl;
 
-Etl::service('db')->addConnection($config); // connection name: 'default'
+Evtl::service('db')->addConnection($config); // connection name: 'default'
 ```
 
 You can add more connections passing a name as the second argument to the `addConnection` method:
 ```php
-use Vtoropchin\Evtl\Etl;
+use Vtoropchin\Evtl\Evtl;
 
-Etl::service('db')->addConnection($config, 'name');
+Evtl::service('db')->addConnection($config, 'name');
 ```
 
 
@@ -83,5 +83,5 @@ If you are using Laravel 5.5 or greater, the package will automatically register
 
 For other versions, you need to add the ServiceProvider to the `providers` array in the `config/app.php` file:
 ```php
-Vtoropchin\Evtl\EtlServiceProvider::class,
+Vtoropchin\Evtl\EvtlServiceProvider::class,
 ```
