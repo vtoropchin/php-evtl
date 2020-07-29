@@ -3,7 +3,7 @@
 Extracts data from a JavaScript Object Notation file.
 
 ```php
-$etl->extract('json', 'path/to/file.json', $options);
+$evtl->extract('json', 'path/to/file.json', $options);
 ```
 
 

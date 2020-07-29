@@ -3,7 +3,7 @@
 Rename columns.
 
 ```php
-$etl->transform('rename_columns', $options);
+$evtl->transform('rename_columns', $options);
 ```
 
 

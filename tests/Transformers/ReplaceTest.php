@@ -3,8 +3,8 @@
 namespace Tests\Transformers;
 
 use Tests\TestCase;
-use Marquine\Etl\Row;
-use Marquine\Etl\Transformers\Replace;
+use Vtoropchin\Evtl\Row;
+use Vtoropchin\Evtl\Transformers\Replace;
 
 class ReplaceTest extends TestCase
 {
@@ -49,8 +49,8 @@ class ReplaceTest extends TestCase
         $transformer = new Replace;
 
         $transformer->options([
-            'search' => 'Doe', 
-            'replace' => 'Die' , 
+            'search' => 'Doe',
+            'replace' => 'Die' ,
             'columns' => ['name']
         ]);
 
@@ -72,15 +72,15 @@ class ReplaceTest extends TestCase
 
         $transformer->options([
             'type' => 'str',
-            'search' => 'Doe', 
-            'replace' => 'Die', 
+            'search' => 'Doe',
+            'replace' => 'Die',
         ]);
 
         $this->execute($transformer, $this->data);
 
         $this->assertEquals($expected, $this->data);
     }
-    
+
     /** @test */
     public function str_type_option_custom_columns()
     {
@@ -94,9 +94,9 @@ class ReplaceTest extends TestCase
 
         $transformer->options([
             'type' => 'str',
-            'search' => 'Doe', 
-            'replace' => 'Die' , 
-            'columns' => ['name'], 
+            'search' => 'Doe',
+            'replace' => 'Die' ,
+            'columns' => ['name'],
         ]);
 
         $this->execute($transformer, $this->data);
@@ -117,8 +117,8 @@ class ReplaceTest extends TestCase
 
         $transformer->options([
             'type' => 'preg',
-            'search' => '/Doe/m', 
-            'replace' => 'Die', 
+            'search' => '/Doe/m',
+            'replace' => 'Die',
         ]);
 
         $this->execute($transformer, $this->data);
@@ -139,9 +139,9 @@ class ReplaceTest extends TestCase
 
         $transformer->options([
             'type' => 'preg',
-            'search' => '/Doe/m', 
+            'search' => '/Doe/m',
             'replace' => 'Die',
-            'columns' => ['name'], 
+            'columns' => ['name'],
         ]);
 
         $this->execute($transformer, $this->data);

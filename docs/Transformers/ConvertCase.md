@@ -3,7 +3,7 @@
 Convert string case.
 
 ```php
-$etl->transform('convert_case', $options);
+$evtl->transform('convert_case', $options);
 ```
 
 

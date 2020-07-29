@@ -1,16 +1,16 @@
 <?php
 
-namespace Marquine\Etl\Transformers;
+namespace Vtoropchin\Evtl\Transformers;
 
-use Marquine\Etl\Row;
-use Marquine\Etl\Step;
+use Vtoropchin\Evtl\Row;
+use Vtoropchin\Evtl\Step;
 
 abstract class Transformer extends Step
 {
     /**
      * Transform the given row.
      *
-     * @param  \Marquine\Etl\Row  $row
+     * @param  \Vtoropchin\Evtl\Row  $row
      * @return void
      */
     abstract public function transform(Row $row);

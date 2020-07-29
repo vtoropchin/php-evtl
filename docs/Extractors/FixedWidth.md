@@ -3,7 +3,7 @@
 Extracts data from a text file with fields delimited by a fixed number of characters.
 
 ```php
-$etl->extract('fixed_width', 'path/to/file.txt', $options);
+$evtl->extract('fixed_width', 'path/to/file.txt', $options);
 ```
 
 

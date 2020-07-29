@@ -1,6 +1,6 @@
 <?php
 
-namespace Marquine\Etl\Database;
+namespace Vtoropchin\Evtl\Database;
 
 use InvalidArgumentException;
 
@@ -9,7 +9,7 @@ class Manager
     /**
      * The Connection Factory.
      *
-     * @var \Marquine\Etl\Database\ConnectionFactory
+     * @var \Vtoropchin\Evtl\Database\ConnectionFactory
      */
     protected $factory;
 
@@ -30,7 +30,7 @@ class Manager
     /**
      * Create a new database manager instance.
      *
-     * @param  \Marquine\Etl\Database\ConnectionFactory  $factory
+     * @param  \Vtoropchin\Evtl\Database\ConnectionFactory  $factory
      * @return void
      */
     public function __construct(ConnectionFactory $factory)
@@ -54,7 +54,7 @@ class Manager
      * Get a connection instance.
      *
      * @param  string  $name
-     * @return \Marquine\Etl\Database\Connection
+     * @return \Vtoropchin\Evtl\Database\Connection
      */
     protected function getConnection($name)
     {
@@ -69,7 +69,7 @@ class Manager
      * Make a connection instance.
      *
      * @param  string  $name
-     * @return \Marquine\Etl\Database\Connection
+     * @return \Vtoropchin\Evtl\Database\Connection
      *
      * @throws \InvalidArgumentException
      */
@@ -86,7 +86,7 @@ class Manager
      * Get a new query builder instance.
      *
      * @param  string  $connection
-     * @return \Marquine\Etl\Database\Query
+     * @return \Vtoropchin\Evtl\Database\Query
      */
     public function query($connection)
     {
@@ -97,7 +97,7 @@ class Manager
      * Get a new statement builder instance.
      *
      * @param  string  $connection
-     * @return \Marquine\Etl\Database\Statement
+     * @return \Vtoropchin\Evtl\Database\Statement
      */
     public function statement($connection)
     {
@@ -108,7 +108,7 @@ class Manager
      * Get a new transaction instance.
      *
      * @param  string  $connection
-     * @return \Marquine\Etl\Database\Transaction
+     * @return \Vtoropchin\Evtl\Database\Transaction
      */
     public function transaction($connection)
     {

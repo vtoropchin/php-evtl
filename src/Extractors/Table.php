@@ -1,9 +1,9 @@
 <?php
 
-namespace Marquine\Etl\Extractors;
+namespace Vtoropchin\Evtl\Extractors;
 
-use Marquine\Etl\Row;
-use Marquine\Etl\Database\Manager;
+use Vtoropchin\Evtl\Row;
+use Vtoropchin\Evtl\Database\Manager;
 
 class Table extends Extractor
 {
@@ -31,7 +31,7 @@ class Table extends Extractor
     /**
      * The database manager.
      *
-     * @var \Marquine\Etl\Database\Manager
+     * @var \Vtoropchin\Evtl\Database\Manager
      */
     protected $db;
 
@@ -47,7 +47,7 @@ class Table extends Extractor
     /**
      * Create a new Table Extractor instance.
      *
-     * @param  \Marquine\Etl\Database\Manager  $manager
+     * @param  \Vtoropchin\Evtl\Database\Manager  $manager
      * @return void
      */
     public function __construct(Manager $manager)

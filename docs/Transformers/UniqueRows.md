@@ -3,7 +3,7 @@
 Remove duplicate rows from the input stream.
 
 ```php
-$etl->transform('unique_rows', $options);
+$evtl->transform('unique_rows', $options);
 ```
 
 

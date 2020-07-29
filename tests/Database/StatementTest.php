@@ -3,7 +3,7 @@
 namespace Tests\Database;
 
 use Tests\TestCase;
-use Marquine\Etl\Database\Statement;
+use Vtoropchin\Evtl\Database\Statement;
 
 class StatementTest extends TestCase
 {

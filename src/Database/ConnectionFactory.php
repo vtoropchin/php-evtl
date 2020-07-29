@@ -1,6 +1,6 @@
 <?php
 
-namespace Marquine\Etl\Database;
+namespace Vtoropchin\Evtl\Database;
 
 use InvalidArgumentException;
 
@@ -25,7 +25,7 @@ class ConnectionFactory
     * Get the database connector.
     *
     * @param  string  $driver
-    * @return \Marquine\Etl\Database\Connectors\Connector
+    * @return \Vtoropchin\Evtl\Database\Connectors\Connector
     */
     protected function getConnector($driver)
     {

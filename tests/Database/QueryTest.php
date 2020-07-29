@@ -3,7 +3,7 @@
 namespace Tests\Database;
 
 use Tests\TestCase;
-use Marquine\Etl\Database\Query;
+use Vtoropchin\Evtl\Database\Query;
 
 class QueryTest extends TestCase
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace Marquine\Etl\Extractors;
+namespace Vtoropchin\Evtl\Extractors;
 
-use Marquine\Etl\Step;
+use Vtoropchin\Evtl\Step;
 
 abstract class Extractor extends Step
 {

@@ -3,8 +3,8 @@
 namespace Tests\Extractors;
 
 use Tests\TestCase;
-use Marquine\Etl\Row;
-use Marquine\Etl\Extractors\Collection;
+use Vtoropchin\Evtl\Row;
+use Vtoropchin\Evtl\Extractors\Collection;
 
 class CollectionTest extends TestCase
 {

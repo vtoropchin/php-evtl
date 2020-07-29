@@ -10,7 +10,7 @@ Extract, Transform and Load data using PHP.
 ## Installation
 In your application's folder, run:
 ```
-composer require marquine/php-etl
+composer require vtoropchin/php-evtl
 ```
 
 ## Documentation
@@ -20,11 +20,11 @@ Documentation can be found [here](https://php-etl.gitbook.io/).
 ## Example
 In the example below, we will extract data from a csv file, trim white spaces from the name and email columns and then insert the values into the users table:
 ```php
-use Marquine\Etl\Etl;
+use Vtoropchin\Evtl\Etl;
 
-$etl = new Etl;
+$evtl = new Etl;
 
-$etl->extract('csv', '/path/to/users.csv')
+$evtl->extract('csv', '/path/to/users.csv')
     ->transform('trim', ['columns' => ['name', 'email']])
     ->load('insert', 'users')
     ->run();

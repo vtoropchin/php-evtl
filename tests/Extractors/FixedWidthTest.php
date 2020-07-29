@@ -3,8 +3,8 @@
 namespace Tests\Extractors;
 
 use Tests\TestCase;
-use Marquine\Etl\Row;
-use Marquine\Etl\Extractors\FixedWidth;
+use Vtoropchin\Evtl\Row;
+use Vtoropchin\Evtl\Extractors\FixedWidth;
 
 class FixedWidthTest extends TestCase
 {

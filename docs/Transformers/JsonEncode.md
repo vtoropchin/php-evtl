@@ -3,7 +3,7 @@
 Converts a value into its JSON representation.
 
 ```php
-$etl->transform('json_encode', $options);
+$evtl->transform('json_encode', $options);
 ```
 
 

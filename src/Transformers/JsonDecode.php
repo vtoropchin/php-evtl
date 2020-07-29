@@ -1,8 +1,8 @@
 <?php
 
-namespace Marquine\Etl\Transformers;
+namespace Vtoropchin\Evtl\Transformers;
 
-use Marquine\Etl\Row;
+use Vtoropchin\Evtl\Row;
 
 class JsonDecode extends Transformer
 {
@@ -46,7 +46,7 @@ class JsonDecode extends Transformer
     /**
      * Transform the given row.
      *
-     * @param  \Marquine\Etl\Row  $row
+     * @param  \Vtoropchin\Evtl\Row  $row
      * @return void
      */
     public function transform(Row $row)

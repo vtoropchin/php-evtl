@@ -1,9 +1,9 @@
 <?php
 
-namespace Marquine\Etl\Extractors;
+namespace Vtoropchin\Evtl\Extractors;
 
 use XMLReader;
-use Marquine\Etl\Row;
+use Vtoropchin\Evtl\Row;
 
 class Xml extends Extractor
 {

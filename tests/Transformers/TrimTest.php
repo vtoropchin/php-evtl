@@ -3,8 +3,8 @@
 namespace Tests\Transformers;
 
 use Tests\TestCase;
-use Marquine\Etl\Row;
-use Marquine\Etl\Transformers\Trim;
+use Vtoropchin\Evtl\Row;
+use Vtoropchin\Evtl\Transformers\Trim;
 
 class TrimTest extends TestCase
 {

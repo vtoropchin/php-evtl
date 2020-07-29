@@ -4,7 +4,7 @@
 In your application's folder, run:
 
 ```
-composer require marquine/php-etl
+composer require vtoropchin/php-evtl
 ```
 
 ## Database Configuration
@@ -64,14 +64,14 @@ $config = [
 
 Adding the default connection:
 ```php
-use Marquine\Etl\Etl;
+use Vtoropchin\Evtl\Etl;
 
 Etl::service('db')->addConnection($config); // connection name: 'default'
 ```
 
 You can add more connections passing a name as the second argument to the `addConnection` method:
 ```php
-use Marquine\Etl\Etl;
+use Vtoropchin\Evtl\Etl;
 
 Etl::service('db')->addConnection($config, 'name');
 ```
@@ -83,5 +83,5 @@ If you are using Laravel 5.5 or greater, the package will automatically register
 
 For other versions, you need to add the ServiceProvider to the `providers` array in the `config/app.php` file:
 ```php
-Marquine\Etl\EtlServiceProvider::class,
+Vtoropchin\Evtl\EtlServiceProvider::class,
 ```

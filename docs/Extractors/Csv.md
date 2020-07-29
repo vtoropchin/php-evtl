@@ -3,7 +3,7 @@
 Extracts data from a character-separated values file.
 
 ```php
-$etl->extract('csv', 'path/to/file.csv', $options);
+$evtl->extract('csv', 'path/to/file.csv', $options);
 ```
 
 

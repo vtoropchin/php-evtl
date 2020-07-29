@@ -3,7 +3,7 @@
 Extracts data from any iterable item. It accepts arrays or traversables objects. The collection items must be associative arrays.
 
 ```php
-$etl->extract('collection', $iterable, $options);
+$evtl->extract('collection', $iterable, $options);
 ```
 
 > **Tip:** Using generators will decrease memory usage.

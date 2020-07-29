@@ -3,7 +3,7 @@
 Inserts data into a database table.
 
 ```php
-$etl->load('insert_update', 'table_name', $options);
+$evtl->load('insert_update', 'table_name', $options);
 ```
 
 

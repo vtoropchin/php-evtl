@@ -3,7 +3,7 @@
 Extractors are the entry point of any process. To start a process, you must set up an extractor to read a data source such as a csv file or a database table. Extractors receive three arguments: type, source and options (optional).
 
 ```php
-$etl->extract('type', $source, $options);
+$evtl->extract('type', $source, $options);
 ```
 
 

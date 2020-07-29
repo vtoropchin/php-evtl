@@ -1,9 +1,9 @@
 <?php
 
-namespace Marquine\Etl\Loaders;
+namespace Vtoropchin\Evtl\Loaders;
 
-use Marquine\Etl\Row;
-use Marquine\Etl\Step;
+use Vtoropchin\Evtl\Row;
+use Vtoropchin\Evtl\Step;
 
 abstract class Loader extends Step
 {
@@ -30,7 +30,7 @@ abstract class Loader extends Step
     /**
      * Load the given row.
      *
-     * @param  \Marquine\Etl\Row  $row
+     * @param  \Vtoropchin\Evtl\Row  $row
      * @return void
      */
     abstract public function load(Row $row);

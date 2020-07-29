@@ -3,8 +3,8 @@
 namespace Tests\Transformers;
 
 use Tests\TestCase;
-use Marquine\Etl\Row;
-use Marquine\Etl\Transformers\JsonEncode;
+use Vtoropchin\Evtl\Row;
+use Vtoropchin\Evtl\Transformers\JsonEncode;
 
 class JsonEncodeTest extends TestCase
 {

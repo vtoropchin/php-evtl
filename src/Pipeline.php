@@ -1,11 +1,11 @@
 <?php
 
-namespace Marquine\Etl;
+namespace Vtoropchin\Evtl;
 
 use Iterator;
-use Marquine\Etl\Loaders\Loader;
-use Marquine\Etl\Extractors\Extractor;
-use Marquine\Etl\Transformers\Transformer;
+use Vtoropchin\Evtl\Loaders\Loader;
+use Vtoropchin\Evtl\Extractors\Extractor;
+use Vtoropchin\Evtl\Transformers\Transformer;
 
 class Pipeline implements Iterator
 {
@@ -40,14 +40,14 @@ class Pipeline implements Iterator
     /**
      * The current iteration row.
      *
-     * @var \Marquine\Etl\Row
+     * @var \Vtoropchin\Evtl\Row
      */
     protected $current;
 
     /**
      * The etl extractor.
      *
-     * @var \Marquine\Etl\Extractors\Extractor
+     * @var \Vtoropchin\Evtl\Extractors\Extractor
      */
     protected $extractor;
 
@@ -61,7 +61,7 @@ class Pipeline implements Iterator
     /**
      * Set the pipeline extractor.
      *
-     * @param  \Marquine\Etl\Extractors\Extractor  $extractor
+     * @param  \Vtoropchin\Evtl\Extractors\Extractor  $extractor
      * @return void
      */
     public function extractor(Extractor $extractor)
@@ -72,7 +72,7 @@ class Pipeline implements Iterator
     /**
      * Add a step to the pipeline.
      *
-     * @param  \Marquine\EtlStep  $step
+     * @param  \Vtoropchin\EvtlStep  $step
      * @return void
      */
     public function pipe(Step $step)

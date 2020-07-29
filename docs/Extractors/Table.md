@@ -3,7 +3,7 @@
 Extracts data from a database table.
 
 ```php
-$etl->extract('table', 'table_name', $options);
+$evtl->extract('table', 'table_name', $options);
 ```
 
 

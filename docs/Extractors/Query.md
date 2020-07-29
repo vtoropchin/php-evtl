@@ -3,7 +3,7 @@
 Extracts data from a database table using a custom SQL query.
 
 ```php
-$etl->extract('query', 'select * from users', $options);
+$evtl->extract('query', 'select * from users', $options);
 ```
 
 

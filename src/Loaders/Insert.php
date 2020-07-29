@@ -1,9 +1,9 @@
 <?php
 
-namespace Marquine\Etl\Loaders;
+namespace Vtoropchin\Evtl\Loaders;
 
-use Marquine\Etl\Row;
-use Marquine\Etl\Database\Manager;
+use Vtoropchin\Evtl\Row;
+use Vtoropchin\Evtl\Database\Manager;
 
 class Insert extends Loader
 {
@@ -59,14 +59,14 @@ class Insert extends Loader
     /**
      * The database transaction manager.
      *
-     * @var \Marquine\Etl\Database\Transaction
+     * @var \Vtoropchin\Evtl\Database\Transaction
      */
     protected $transactionManager;
 
     /**
      * The database manager.
      *
-     * @var \Marquine\Etl\Database\Manager
+     * @var \Vtoropchin\Evtl\Database\Manager
      */
     protected $db;
 
@@ -82,7 +82,7 @@ class Insert extends Loader
     /**
      * Create a new Insert Loader instance.
      *
-     * @param  \Marquine\Etl\Database\Manager  $manager
+     * @param  \Vtoropchin\Evtl\Database\Manager  $manager
      * @return void
      */
     public function __construct(Manager $manager)
@@ -113,7 +113,7 @@ class Insert extends Loader
     /**
      * Load the given row.
      *
-     * @param  \Marquine\Etl\Row  $row
+     * @param  \Vtoropchin\Evtl\Row  $row
      * @return void
      */
     public function load(Row $row)

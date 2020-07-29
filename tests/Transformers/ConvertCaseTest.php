@@ -3,16 +3,21 @@
 namespace Tests\Transformers;
 
 use Tests\TestCase;
-use Marquine\Etl\Row;
-use Marquine\Etl\Transformers\ConvertCase;
+use Vtoropchin\Evtl\Row;
+use Vtoropchin\Evtl\Transformers\ConvertCase;
 
 class ConvertCaseTest extends TestCase
 {
+    /**
+     * @var array|Row[]
+     */
+    protected array $dataRow;
+
     protected function setUp()
     {
         parent::setUp();
 
-        $this->data = [
+        $this->dataRow = [
             new Row(['id' => '1', 'name' => 'jane doe', 'email' => 'janedoe@email.com']),
             new Row(['id' => '2', 'name' => 'JOHN DOE', 'email' => 'JOHNDOE@EMAIL.COM']),
         ];
@@ -30,9 +35,9 @@ class ConvertCaseTest extends TestCase
 
         $transformer->options(['mode' => 'lower']);
 
-        $this->execute($transformer, $this->data);
+        $this->execute($transformer, $this->dataRow);
 
-        $this->assertEquals($expected, $this->data);
+        $this->assertEquals($expected, $this->dataRow);
     }
 
     /** @test */
@@ -47,26 +52,26 @@ class ConvertCaseTest extends TestCase
 
         $transformer->options(['mode' => 'upper']);
 
-        $this->execute($transformer, $this->data);
+        $this->execute($transformer, $this->dataRow);
 
-        $this->assertEquals($expected, $this->data);
+        $this->assertEquals($expected, $this->dataRow);
     }
 
     /** @test */
     public function titlecase()
     {
         $expected = [
-            new Row(['id' => '1', 'name' => 'Jane Doe', 'email' => 'Janedoe@email.com']),
-            new Row(['id' => '2', 'name' => 'John Doe', 'email' => 'Johndoe@email.com']),
+            new Row(['id' => '1', 'name' => 'Jane Doe', 'email' => 'Janedoe@Email.com']),
+            new Row(['id' => '2', 'name' => 'John Doe', 'email' => 'Johndoe@Email.com']),
         ];
 
         $transformer = new ConvertCase;
 
         $transformer->options(['mode' => 'title']);
 
-        $this->execute($transformer, $this->data);
+        $this->execute($transformer, $this->dataRow);
 
-        $this->assertEquals($expected, $this->data);
+        $this->assertEquals($expected, $this->dataRow);
     }
 
     /** @test */
@@ -81,8 +86,8 @@ class ConvertCaseTest extends TestCase
 
         $transformer->options(['columns' => ['name']]);
 
-        $this->execute($transformer, $this->data);
+        $this->execute($transformer, $this->dataRow);
 
-        $this->assertEquals($expected, $this->data);
+        $this->assertEquals($expected, $this->dataRow);
     }
 }

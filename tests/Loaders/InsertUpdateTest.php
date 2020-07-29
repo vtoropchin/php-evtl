@@ -3,7 +3,7 @@
 namespace Tests\Loaders;
 
 use Tests\TestCase;
-use Marquine\Etl\Loaders\InsertUpdate;
+use Vtoropchin\Evtl\Loaders\InsertUpdate;
 
 class InsertUpdateTest extends TestCase
 {
@@ -11,7 +11,7 @@ class InsertUpdateTest extends TestCase
     {
         parent::setUp();
 
-        $this->transaction = $this->createMock('Marquine\Etl\Database\Transaction');
+        $this->transaction = $this->createMock('Vtoropchin\Evtl\Database\Transaction');
         $this->transaction->expects($this->any())->method('size')->willReturnSelf();
         $this->transaction->expects($this->any())->method('run')->willReturnCallback(function ($callback) { call_user_func($callback); });
         $this->transaction->expects($this->any())->method('close');
@@ -19,14 +19,14 @@ class InsertUpdateTest extends TestCase
         $this->insert = $this->createMock('PDOStatement');
         $this->insert->expects($this->any())->method('execute');
 
-        $this->insertStatement = $this->createMock('Marquine\Etl\Database\Statement');
+        $this->insertStatement = $this->createMock('Vtoropchin\Evtl\Database\Statement');
         $this->insertStatement->expects($this->any())->method('insert')->willReturnSelf();
         $this->insertStatement->expects($this->any())->method('prepare')->willReturn($this->insert);
 
         $this->select = $this->createMock('PDOStatement');
         $this->select->expects($this->any())->method('execute');
 
-        $this->selectStatement = $this->createMock('Marquine\Etl\Database\Statement');
+        $this->selectStatement = $this->createMock('Vtoropchin\Evtl\Database\Statement');
         $this->selectStatement->expects($this->any())->method('select')->willReturnSelf();
         $this->selectStatement->expects($this->any())->method('where')->willReturnSelf();
         $this->selectStatement->expects($this->any())->method('prepare')->willReturn($this->select);
@@ -34,21 +34,21 @@ class InsertUpdateTest extends TestCase
         $this->update = $this->createMock('PDOStatement');
         $this->update->expects($this->any())->method('execute');
 
-        $this->updateStatement = $this->createMock('Marquine\Etl\Database\Statement');
+        $this->updateStatement = $this->createMock('Vtoropchin\Evtl\Database\Statement');
         $this->updateStatement->expects($this->any())->method('update')->willReturnSelf();
         $this->updateStatement->expects($this->any())->method('where')->willReturnSelf();
         $this->updateStatement->expects($this->any())->method('prepare')->willReturn($this->update);
 
-        $this->statement = $this->createMock('Marquine\Etl\Database\Statement');
+        $this->statement = $this->createMock('Vtoropchin\Evtl\Database\Statement');
         $this->statement->expects($this->any())->method('insert')->willReturn($this->insertStatement);
         $this->statement->expects($this->any())->method('select')->willReturn($this->selectStatement);
         $this->statement->expects($this->any())->method('update')->willReturn($this->updateStatement);
 
-        $this->manager = $this->createMock('Marquine\Etl\Database\Manager');
+        $this->manager = $this->createMock('Vtoropchin\Evtl\Database\Manager');
         $this->manager->expects($this->any())->method('statement')->willReturn($this->statement);
         $this->manager->expects($this->any())->method('transaction')->willReturn($this->transaction);
 
-        $this->row = $this->createMock('Marquine\Etl\Row');
+        $this->row = $this->createMock('Vtoropchin\Evtl\Row');
         $this->row->expects($this->any())->method('toArray')->willReturn(['id' => '1', 'name' => 'Jane Doe', 'email' => 'janedoe@example.com']);
 
         $this->loader = new InsertUpdate($this->manager);

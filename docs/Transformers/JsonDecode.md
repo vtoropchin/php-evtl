@@ -3,7 +3,7 @@
 Decodes a JSON string.
 
 ```php
-$etl->transform('json_decode', $options);
+$evtl->transform('json_decode', $options);
 ```
 
 

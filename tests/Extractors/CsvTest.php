@@ -3,8 +3,8 @@
 namespace Tests\Extractors;
 
 use Tests\TestCase;
-use Marquine\Etl\Row;
-use Marquine\Etl\Extractors\Csv;
+use Vtoropchin\Evtl\Row;
+use Vtoropchin\Evtl\Extractors\Csv;
 
 class CsvTest extends TestCase
 {

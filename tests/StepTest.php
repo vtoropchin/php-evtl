@@ -19,7 +19,7 @@ class StepTest extends TestCase
     }
 }
 
-class FakeStep extends \Marquine\Etl\Step
+class FakeStep extends \Vtoropchin\Evtl\Step
 {
     protected $option1;
     protected $option2;

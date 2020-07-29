@@ -1,8 +1,8 @@
 <?php
 
-namespace Marquine\Etl\Extractors;
+namespace Vtoropchin\Evtl\Extractors;
 
-use Marquine\Etl\Row;
+use Vtoropchin\Evtl\Row;
 
 class FixedWidth extends Extractor
 {

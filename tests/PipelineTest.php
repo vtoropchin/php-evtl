@@ -2,7 +2,7 @@
 
 namespace Tests;
 
-use Marquine\Etl\Pipeline;
+use Vtoropchin\Evtl\Pipeline;
 
 class PipelineTest extends TestCase
 {
@@ -10,13 +10,13 @@ class PipelineTest extends TestCase
     {
         parent::setUp();
 
-        $this->row1 = $this->createMock('Marquine\Etl\Row');
+        $this->row1 = $this->createMock('Vtoropchin\Evtl\Row');
         $this->row1->expects($this->any())->method('toArray')->willReturn('row1');
 
-        $this->row2 = $this->createMock('Marquine\Etl\Row');
+        $this->row2 = $this->createMock('Vtoropchin\Evtl\Row');
         $this->row2->expects($this->any())->method('toArray')->willReturn('row2');
 
-        $this->row3 = $this->createMock('Marquine\Etl\Row');
+        $this->row3 = $this->createMock('Vtoropchin\Evtl\Row');
         $this->row3->expects($this->any())->method('toArray')->willReturn('row3');
 
         $generator = function () {
@@ -25,13 +25,13 @@ class PipelineTest extends TestCase
             yield $this->row3;
         };
 
-        $this->extractor = $this->createMock('Marquine\Etl\Extractors\Extractor');
+        $this->extractor = $this->createMock('Vtoropchin\Evtl\Extractors\Extractor');
         $this->extractor->expects($this->any())->method('extract')->willReturn($generator());
 
-        $this->transformer = $this->createMock('Marquine\Etl\Transformers\Transformer');
+        $this->transformer = $this->createMock('Vtoropchin\Evtl\Transformers\Transformer');
         $this->transformer->expects($this->any())->method('transform')->withConsecutive([$this->row1], [$this->row2], [$this->row3]);
 
-        $this->loader = $this->createMock('Marquine\Etl\Loaders\Loader');
+        $this->loader = $this->createMock('Vtoropchin\Evtl\Loaders\Loader');
         $this->loader->expects($this->any())->method('load')->withConsecutive([$this->row1], [$this->row2], [$this->row3]);
 
         $this->pipeline = new Pipeline;

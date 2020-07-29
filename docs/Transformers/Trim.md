@@ -3,7 +3,7 @@
 Strip whitespace (or other characters) from the beginning and/or end of a string.
 
 ```php
-$etl->transform('trim', $options);
+$evtl->transform('trim', $options);
 ```
 
 

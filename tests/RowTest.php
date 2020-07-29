@@ -2,7 +2,7 @@
 
 namespace Tests;
 
-use Marquine\Etl\Row;
+use Vtoropchin\Evtl\Row;
 
 class RowTest extends TestCase
 {

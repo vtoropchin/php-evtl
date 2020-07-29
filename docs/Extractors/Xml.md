@@ -3,7 +3,7 @@
 Extracts data from an XML file.
 
 ```php
-$etl->extract('xml', 'path/to/file.xml', $options);
+$evtl->extract('xml', 'path/to/file.xml', $options);
 ```
 
 

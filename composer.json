@@ -1,5 +1,5 @@
 {
-    "name": "marquine/php-etl",
+    "name": "vtoropchin/php-evtl",
     "description": "Extract, Transform and Load data using PHP.",
     "keywords": ["etl", "extract", "transform", "load", "extraction", "transformation", "seed", "data", "laravel"],
     "license": "MIT",
@@ -7,6 +7,10 @@
         {
             "name": "Leonardo Marquine",
             "email": "leonardomarquine@gmail.com"
+        },
+        {
+            "name": "Vladimir Toropchin",
+            "email": "vtoropchinjob@gmail.com"
         }
     ],
     "require": {
@@ -15,7 +19,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Marquine\\Etl\\": "src/"
+            "Vtoropchin\\Evtl\\": "src/"
         }
     },
     "require-dev": {
@@ -29,7 +33,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Marquine\\Etl\\EtlServiceProvider"
+                "Vtoropchin\\Evtl\\EvtlServiceProvider"
             ]
         }
     },

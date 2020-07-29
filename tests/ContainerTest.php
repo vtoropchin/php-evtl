@@ -2,7 +2,7 @@
 
 namespace Tests;
 
-use Marquine\Etl\Container;
+use Vtoropchin\Evtl\Container;
 
 class ContainerTest extends TestCase
 {
